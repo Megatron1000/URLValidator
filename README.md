@@ -15,8 +15,10 @@ A block based class to check if a string forms a valid url and if the link is li
 Provide a string, like so....
 
     NSString *fullURLString = @"http://www.google.com";
+    
+    URLValidator *myValidator = [[URLValidator alloc]init];
 
-    [self.myValidator validateURLFromString:fullURLString completionHandler:^(URLCheckResult result) {
+    [myValidator validateURLFromString:fullURLString completionHandler:^(URLCheckResult result) {
         if (result == URLAccepted){
             // The URL is valid
             [self.linkButton setEnabled:TRUE];
